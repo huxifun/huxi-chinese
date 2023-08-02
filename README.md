@@ -1,6 +1,6 @@
 # 呼吸中文输入法
 
-版本： 2.0
+版本： 2.1
 
 作者： huxifun@sina.com
 
@@ -13,6 +13,7 @@
  - [3. Vim/Neovim版](#sec-3)
  - [4. 小小平台版](#sec-4)
  - [5. Android 手机版](#sec-5)
+ - [6. Fcitx版](#sec-6)
 
 ## 1. 中文编码<a id="sec-1"></a>
 
@@ -115,3 +116,8 @@
 我对APP进行了定制，这样在手机和平板上使用时就很方便了，以下是android平板上的截图：
 
 ![android截图](yong/keyboard/pad.png)
+
+## 6. Fcitx版<a id="sec-6"></a>
+
+在Linux中使用`Fcitx`输入法时，把`fcitx4`目录中的`huxi.conf`和`huxi.mb`复制到`~/.config/fcitx/table/`中，
+然后重启Fcitx即可。
