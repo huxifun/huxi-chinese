@@ -119,5 +119,18 @@
 
 ## 6. Fcitx版<a id="sec-6"></a>
 
-在Linux中使用`Fcitx`输入法时，把`fcitx4`目录中的`huxi.conf`和`huxi.mb`复制到`~/.config/fcitx/table/`中，
-然后重启Fcitx即可。
+在Linux中使用`Fcitx4`输入法时；
+
+```bash
+cp fcitx4/huxi.conf ~/.config/fcitx/table/
+cp fcitx4/huxi.mb   ~/.config/fcitx/table/
+```
+
+在Linux中使用`Fcitx5`输入法时；
+
+```bash
+sudo cp fcitx5/huxi.conf /usr/share/fcitx5/inputmethod/
+sudo cp fcitx5/huxi.dict /usr/share/libime/
+```
+
+重启fcitx，在`fcitx-config`工具中选择huxi即可。
