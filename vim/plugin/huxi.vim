@@ -1,11 +1,11 @@
 " Huxi Input Method for Chinese
 " 呼吸中文输入法 (Vim 版本)
 " Author: huxifun@sina.com
-" Last Change:	2022-06-25 
-" Release Version: 6.0
+" Last Change:	2023-08-15 
+" Release Version: 6.5
 " License: GPL
 "
-" 主页：https://github.com/huxi-fun/huxi
+" 主页：https://github.com/huxifun/huxi-chinese
 "
 " {{{
 "
@@ -45,8 +45,8 @@
 "   ` 位于键盘左上角的反单引号键，用于中英文切换
 "   <Ctrl-e> 中英文标点切换
 "
-"   ' 单引号切换到临时英文，可在文件cy.cy当中的 EnChar 当中设置
-"   { 大括号切换到临时拼音 ，在文件cy.cy当中的 PyChar 当中设置
+"   ' 单引号切换到临时英文，可在文件huxi-35000.txt当中的 EnChar 当中设置
+"   { 大括号切换到临时拼音 ，在文件huxi-3500.txt当中的 PyChar 当中设置
 "   ` （位于键盘左上角的反单引号）输入大写英文字母自动切换到英文模式时返回中文模式
 
 "   - 向上翻页
@@ -108,7 +108,7 @@ let g:cy_conv = '' " 设置简繁转换方向，'g2b' 为简转繁，'b2g' 为�
 let g:cy_matchexact = 0  " 严格匹配
 let g:cy_gb = 0 " 是否只输入 gb2312 范围汉字
 let g:cy_reg_name = 'y'  " 默认使用的 register 名称
-let g:cy_search_brave = 1 " 是否使用CY搜索方式，1 表示打开，0 表示关闭
+let g:cy_search_brave = 1 " 是否使用搜索方式，1 表示打开，0 表示关闭
 " 基本配置结束}}} 
 
 " 默认参数
@@ -164,8 +164,9 @@ endif
 "  初始化 {{{
 let g:cy_ims=[
             \['cy', '呼吸', 'hx-3500.txt'],
+            \['py', 'PY', 'pinyin.txt'],
             \]
-let g:cy_py = {'helpim':'cy', 'gb':0 } 
+let g:cy_py = {'helpim':'py', 'gb':0 } 
 let g:cy_chinesecode = 1 " 是否显示中文字母名称
 
 if exists('g:loaded_cy') || &cp || version < 702
