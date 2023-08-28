@@ -1,0 +1,51 @@
+# vim:fileencoding=utf-8:list:listchars=trail\:]:
+# version  6.0
+# huxi 3500
+[Description]
+Name=呼吸
+MaxCodes=3
+EndInput=1
+MaxElement=0
+UsedCodes=;/'abcdefghijklmnopqrstuvwxyz
+WildChar=*
+NumRules=0
+EnChar=`
+PyChar={
+
+[CharDefinition]
+
+[Punctuation]
+{ 『
+| ÷
+} 』
+~ ～
+\ 、
+! ！
+# ＃
+$ ￥
+% ％
+& ※
+( （
+) ）
+* ×
++ ＋
+, ，
+- －
+. 。
+: ：
+; ；
+< 《
+= ＝
+> 》
+? ？
+@ ◎
+[ 【
+] 】
+^ ……
+_ ──
+" “ ”
+' ‘ ’
+~ 　
+/ /
+
+[Main]

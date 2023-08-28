@@ -1,0 +1,44 @@
+;; -*- coding:utf-8 -*-
+;; sm-3500
+[Comment]
+
+[Parameter]
+first-char=;zyxwvutsrqponmlkjihgfedcba
+total-char=;/'abcdefghijklmnopqrstuvwxyz
+lib=huxi-cy
+max-codes=3
+page-length=10
+
+[Punctuation]
+{ 『
+| ÷
+} 』
+~ ～
+` ・
+! ！
+# ＃
+$ ￥
+% ％
+& ※
+( （
+) ）
+* ×
++ ＋
+, ，
+- －
+. 。
+\ 、
+: ：
+< 《
+= ＝
+> 》
+? ？
+@ ◎
+[ 【
+] 】
+^ ……
+_ ──
+" “ ”
+' ‘ ’
+
+[Table]

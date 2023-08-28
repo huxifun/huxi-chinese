@@ -1,0 +1,12 @@
+name=huxi
+key=;/abcdefghijklmnopqrstuvwxyz'
+len=3
+commit=1 0 2
+pull=;
+nomove=;
+wildcard=]
+code_e1=p..
+code_e2=p11+p12+p21+p22
+code_e3=p11+p21+p31+;
+code_a4=p11+p21+p31+'
+[data]
