@@ -56,16 +56,19 @@
               (set-cursor-color "DeepSkyBlue")
               (setq-local evil-normal-state-cursor '("DeepSkyBlue" box))))
 
-  (add-hook 'input-method-inactivate-hook
+  (add-hook 'input-method-deactivate-hook
             (lambda ()
               (set-cursor-color "red")
               (setq-local evil-normal-state-cursor '("red" box))))
 
-  ;; insert 模式时，遇到括号自动切换英文
+  ;; evil insert 模式时，遇到括号自动切换英文
   (add-hook 'evil-insert-state-entry-hook 'huxi-evil-insert-entry-toggle)
+
+  ;; evil normal 模式时，关闭输入法
+  (add-hook 'evil-insert-state-exit-hook 'huxi-evil-normal-toggle)
   
   ;; minibuffer 中输入时关闭中文输入法
-  (add-hook 'minibuffer-setup-hook 'deactivate-input-method)
+  ;; (add-hook 'minibuffer-setup-hook 'deactivate-input-method)
   )
 ```
 

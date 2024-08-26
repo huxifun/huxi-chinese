@@ -108,7 +108,7 @@ If you don't like this funciton, set the variable to nil")
   (if current-input-method
       (progn
 	      (insert (char-to-string last-input-event))
-        (call-interactively 'toggle-input-method))
+        (ignore-errors (call-interactively 'toggle-input-method)))
     (call-interactively 'self-insert-command)))
 
 
@@ -117,14 +117,16 @@ If you don't like this funciton, set the variable to nil")
   (interactive)
   (if current-input-method
       (huxi-quit-clear))
-  (toggle-input-method))
+  (ignore-errors
+    (call-interactively 'toggle-input-method)))
 
 (defun huxi-toggle2 ()
   "切换输入法"
   (interactive)
   (if current-input-method
       (huxi-quit-clear))
-  (toggle-input-method)
+  (ignore-errors
+    (call-interactively 'toggle-input-method))
   (insert " "))
 
 (defun huxi-quick-en-space-off ()
@@ -132,29 +134,34 @@ If you don't like this funciton, set the variable to nil")
   (interactive)
   (insert " ")
   (when huxi-quick-en-on
-    (toggle-input-method)
+    (ignore-errors (toggle-input-method))
     (setq huxi-quick-en-on nil)))
 
 (defun huxi-evil-normal-toggle ()
   "Evil 中，在 normal 状态下关闭输入法"
   (interactive)
-  (call-interactively 'evil-insert)
+  ;;(call-interactively 'evil-insert)
   (if current-input-method
       (progn
-        (call-interactively 'toggle-input-method)))
-  (call-interactively 'evil-force-normal-state))
+	      (ignore-errors
+          (call-interactively 'toggle-input-method))))
+  ;;(call-interactively 'evil-force-normal-state)
+  ;;(call-interactively 'evil-normal-state)
+
+  )
 
 (defun huxi-evil-insert-entry-toggle ()
   (interactive)
   (when (looking-at huxi-lispy-left)
     (if current-input-method
         (progn
-          (call-interactively 'toggle-input-method))))
+          (ignore-errors (call-interactively 'toggle-input-method)))))
+
   (when (looking-back huxi-lispy-right
                       (line-beginning-position))
     (if current-input-method
         (progn
-          (call-interactively 'toggle-input-method)))))
+          (ignore-errors (call-interactively 'toggle-input-method))))))
 
 ;;;_. load and save history
 (defun huxi-load-history (history-file package)

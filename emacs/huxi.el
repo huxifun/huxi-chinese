@@ -758,7 +758,7 @@ beginning of line"
     (huxi-terminate-translation)))
 
 (defun huxi-j1 ()
-  "select firest"
+  "select first"
   (interactive)
   (if (car huxi-current-choices)
       (let ((index (+ (huxi-page-start) (- ?1 ?2)))
@@ -840,7 +840,8 @@ beginning of line"
 (defun huxi-quit-clear ()
   (interactive)
   (setq huxi-current-str "")
-  (huxi-terminate-translation))
+  (huxi-terminate-translation)
+  )
 
 (defun huxi-quit-no-clear ()
   (interactive)
@@ -1131,6 +1132,6 @@ to the position of point in the selected window."
     (x-show-tip (propertize text 'face 'huxi-tooltip-face)
                 nil params huxi-tooltip-timeout)))
 
-(register-input-method "huxi" "euc-cn" 'huxi-use-package
+(register-input-method "huxi" "UTF-8" 'huxi-use-package
                        "呼吸" "Huxi Emacs 中文输入法" "cy-3500.txt")
 (provide 'huxi)
