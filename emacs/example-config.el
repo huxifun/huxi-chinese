@@ -40,5 +40,5 @@
   (add-hook 'evil-insert-state-exit-hook 'huxi-evil-normal-toggle)
 
   ;; minibuffer 中输入时关闭中文输入法
-  ;(add-hook 'minibuffer-setup-hook 'deactivate-input-method)
+  (add-hook 'minibuffer-setup-hook 'deactivate-input-method)
   )

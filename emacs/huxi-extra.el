@@ -105,10 +105,11 @@ If you don't like this funciton, set the variable to nil")
 (defun huxi-en-toggle ()
   "用于输入大写字母时切换输入法"
   (interactive)
+  (message "aaaaaaaaaa")
   (if current-input-method
       (progn
-	      (insert (char-to-string last-input-event))
-        (ignore-errors (call-interactively 'toggle-input-method)))
+          (insert (char-to-string last-input-event))
+          (call-interactively 'toggle-input-method))
     (call-interactively 'self-insert-command)))
 
 
